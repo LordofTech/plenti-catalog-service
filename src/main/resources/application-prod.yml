@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:mysql://prod-db:3306/plenti_db
+    username: prod_user
+    password: prod_password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+  redis:
+    host: prod-redis
+    port: 6379
+    password: prod_redis_password
+
+jwt:
+  secret: prod_jwt_secret_key
+  expiration: 3600 # 1 hour
+
+monnify:
+  api-key: prod_monnify_api_key
+  secret-key: prod_monnify_secret_key
+
+logging:
+  level:
+    org.springframework: INFO
+    com.plenti: DEBUG
+
+server:
+  port: 8080
